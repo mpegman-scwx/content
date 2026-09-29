@@ -4358,7 +4358,7 @@ def map_priority_to_taegis(xsoar_severity) -> int:
     """
     if xsoar_severity is None:
         return 3  # Default to High (3)
-    if isinstance(xsoar_severity, (int, float)):
+    if isinstance(xsoar_severity, int | float):
         v = int(xsoar_severity)
         if 1 <= v <= 4:
             return v
