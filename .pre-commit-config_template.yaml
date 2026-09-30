@@ -224,7 +224,9 @@ repos:
     pass_filenames: false
     skip:nightly: true
     args:
-    - Packs/SecureWorks
+    - Packs
+    - Tests
+    - Utils
 
   - id: validate-content-paths
     name: validate-content-paths
