@@ -3828,8 +3828,7 @@ def update_remote_system_command(client: Client, xdr_base_url: str, args: dict =
     if (
         not update_args.get("status")
         or (isinstance(update_args.get("status"), str) and not update_args["status"].startswith("CLOSED_"))
-        and inc_is_closed
-    ):
+    ) and inc_is_closed:
         close_reason_status = None
         if delta:
             close_reason_status = get_taegis_status_from_dict(delta)
